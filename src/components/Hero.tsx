@@ -5,7 +5,7 @@ import { ArrowRight, Heart, Users, Star, User, UserCheck, Baby, Award, Shield, C
 
 const Hero = () => {
   return (
-    <section id="main" className="relative min-h-screen bg-gradient-hero flex items-center justify-center pt-24 pb-16">
+    <section id="main" className="relative min-h-screen bg-gradient-hero flex items-center justify-center pt-32 pb-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10"></div>
@@ -20,13 +20,27 @@ const Hero = () => {
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center animate-glow">
-              <div className="w-16 h-16 bg-primary-foreground rounded-full relative">
-                <div className="absolute inset-2 bg-primary rounded-full flex items-center justify-center">
-                  <Heart className="w-8 h-8 text-primary-foreground animate-pulse drop-shadow-lg" style={{
-                    filter: 'drop-shadow(0 0 8px rgba(139, 195, 74, 0.6)) drop-shadow(0 0 16px rgba(139, 195, 74, 0.4))',
-                    animation: 'heartGlow 2s ease-in-out infinite alternate'
-                  }} />
+            <div className="relative">
+              {/* Outer glow rings */}
+              <div className="absolute inset-0 w-24 h-24 bg-gradient-primary rounded-full animate-ping opacity-20"></div>
+              <div className="absolute inset-0 w-24 h-24 bg-gradient-primary rounded-full" style={{
+                animation: 'sunGlow 4s ease-in-out infinite alternate',
+                filter: 'blur(6px)',
+                transform: 'scale(1.1)'
+              }}></div>
+              
+              {/* Main logo */}
+              <div className="relative w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center animate-glow" style={{
+                boxShadow: '0 0 20px rgba(139, 195, 74, 0.3), 0 0 40px rgba(139, 195, 74, 0.15), 0 0 60px rgba(139, 195, 74, 0.08)'
+              }}>
+                <div className="w-16 h-16 bg-primary-foreground rounded-full relative">
+                  <div className="absolute inset-2 bg-primary rounded-full flex items-center justify-center">
+                    <Heart className="w-8 h-8 text-primary-foreground" style={{
+                      animation: 'heartPulse 1.5s ease-in-out infinite',
+                      filter: 'drop-shadow(0 0 8px rgba(139, 195, 74, 0.6)) drop-shadow(0 0 16px rgba(139, 195, 74, 0.4))',
+                      willChange: 'transform'
+                    }} />
+                  </div>
                 </div>
               </div>
             </div>
