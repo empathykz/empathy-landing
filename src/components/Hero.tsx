@@ -22,11 +22,13 @@ const Hero = () => {
           <div className="flex justify-center mb-8">
             <div className="relative">
               {/* Outer glow rings */}
-              <div className="absolute inset-0 w-24 h-24 bg-gradient-primary rounded-full animate-ping opacity-20"></div>
+              <div className="absolute inset-0 w-24 h-24 bg-gradient-primary rounded-full opacity-20" style={{
+                animation: 'slowPing 4s cubic-bezier(0, 0, 0.2, 1) infinite'
+              }}></div>
               <div className="absolute inset-0 w-24 h-24 bg-gradient-primary rounded-full" style={{
-                animation: 'sunGlow 4s ease-in-out infinite alternate',
-                filter: 'blur(6px)',
-                transform: 'scale(1.1)'
+                animation: 'sunGlow 6s ease-in-out infinite alternate',
+                filter: 'blur(4px)',
+                transform: 'scale(1.05)'
               }}></div>
               
               {/* Main logo */}
