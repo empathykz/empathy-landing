@@ -1,73 +1,82 @@
-# Welcome to your Lovable project
+# Эмпатия - Psychology Center Website
 
-## Project info
+## About the Project
 
-**URL**: https://lovable.dev/projects/14134030-be65-4987-8587-dadb87ce8f83
+Modern, responsive website for "Empathy" psychology center in Kazakhstan. Built with React, TypeScript, and Tailwind CSS to provide a professional platform connecting clients with qualified psychologists and mental health professionals.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- 🌟 Modern, responsive design optimized for all devices
+- 💚 Professional green-themed UI with smooth animations
+- 👥 Detailed psychologist and consultant profiles
+- 📅 Events and workshops showcase
+- ❓ Comprehensive FAQ section
+- 🛡️ Professional code of ethics
+- 📱 Social media integration
+- 🌐 Multilingual support (Kazakh, Russian, English)
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/14134030-be65-4987-8587-dadb87ce8f83) and start prompting.
+### Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Installation
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd empathy-psychology-website
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The website will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+```sh
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Technologies Used
 
-## What technologies are used for this project?
+This project is built with modern web technologies:
 
-This project is built with:
+- **Vite** - Fast build tool and development server
+- **React 18** - Modern React with hooks and components
+- **TypeScript** - Type-safe JavaScript for better development
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality, accessible UI components
+- **Lucide React** - Beautiful, customizable icons
+- **React Router** - Client-side routing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Header.tsx      # Navigation header
+│   ├── Hero.tsx        # Landing section
+│   ├── TeamSection.tsx # Psychologists profiles
+│   └── ...
+├── pages/              # Route components
+├── lib/                # Utility functions
+└── index.css          # Global styles and CSS variables
+```
 
-Simply open [Lovable](https://lovable.dev/projects/14134030-be65-4987-8587-dadb87ce8f83) and click on Share -> Publish.
+## Contributing
 
-## Can I connect a custom domain to my Lovable project?
+This is a professional psychology center website. For modifications or contributions, please ensure all content remains professional and appropriate for mental health services.
 
-Yes, you can!
+## License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Private project for Empathy Psychology Center, Kazakhstan.
