@@ -132,7 +132,7 @@ const TeamSection = () => {
 
   const ProfileCard = ({ person, index }: { person: any; index: number }) => (
     <Card 
-      className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/30 animate-fade-in overflow-hidden"
+      className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/30 animate-fade-in overflow-hidden mobile-card-animation active:scale-95 touch-manipulation"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="relative">
@@ -216,7 +216,7 @@ const TeamSection = () => {
         </div>
 
         <Button 
-          className="w-full bg-gradient-primary hover:bg-primary-dark group-hover:shadow-green transition-all duration-300"
+          className="w-full bg-gradient-primary hover:bg-primary-dark group-hover:shadow-green transition-all duration-300 mobile-button-animation touch-manipulation"
           size="sm"
         >
           <MessageCircle className="w-4 h-4 mr-2" />
@@ -232,10 +232,10 @@ const TeamSection = () => {
         {/* Psychologists Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
-            Наши <span className="text-transparent bg-clip-text bg-gradient-primary">психологи</span>
+            Наши <span className="text-transparent bg-clip-text bg-gradient-primary">психотерапевты</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
-            Профессиональные специалисты с многолетним опытом работы
+          Психологи-психотерапевты, работающие со сложными клиническими запросами
           </p>
         </div>
 
@@ -258,10 +258,10 @@ const TeamSection = () => {
         {/* Consultants Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-primary">Консультанты</span>
+            Наши <span className="text-transparent bg-clip-text bg-gradient-primary">психологи</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Опытные консультанты для решения различных жизненных вопросов
+            Опытные КПТ-психологи, работающие с широким профилем запросов
           </p>
         </div>
 

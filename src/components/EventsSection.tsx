@@ -90,7 +90,7 @@ const EventsSection = () => {
           {events.map((event, index) => (
             <Card 
               key={event.id}
-              className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/30 animate-fade-in overflow-hidden"
+              className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-card border-border/50 hover:border-primary/30 animate-fade-in overflow-hidden mobile-card-animation active:scale-95 touch-manipulation"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative aspect-video overflow-hidden">

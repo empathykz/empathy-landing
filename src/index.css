@@ -14,6 +14,54 @@
   }
 }
 
+/* Mobile-friendly animations */
+@keyframes mobileCardPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mobileButtonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 195, 74, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(139, 195, 74, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(139, 195, 74, 0);
+  }
+}
+
+/* Touch-friendly card animations */
+.mobile-card-animation {
+  transition: all 0.3s ease;
+}
+
+.mobile-card-animation:active {
+  animation: mobileCardPulse 0.3s ease;
+  transform: scale(0.98);
+  box-shadow: 0 10px 25px rgba(139, 195, 74, 0.3);
+}
+
+/* Touch-friendly button animations */
+.mobile-button-animation {
+  transition: all 0.2s ease;
+}
+
+.mobile-button-animation:active {
+  animation: mobileButtonPulse 0.4s ease;
+}
+
 /* Slow ping wave animation */
 @keyframes slowPing {
   0% {

@@ -1,8 +1,9 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import PsychologistSelectionSection from '@/components/PsychologistSelectionSection';
 import TeamSection from '@/components/TeamSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import EventsSection from '@/components/EventsSection';
+// import EventsSection from '@/components/EventsSection';
 import OfferSection from '@/components/OfferSection';
 import CodeSection from '@/components/CodeSection';
 import FAQSection from '@/components/FAQSection';
@@ -14,9 +15,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <PsychologistSelectionSection />
         <TeamSection />
         <TestimonialsSection />
-        <EventsSection />
+        {/* <EventsSection /> */}
         <OfferSection />
         <CodeSection />
         <FAQSection />

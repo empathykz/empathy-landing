@@ -56,6 +56,10 @@ const Hero = () => {
             </span>
           </h1>
 
+          <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 font-light">
+            Казахстанский сервис психологической помощи "Эмпатия"
+          </p>
+
           <h2 className="text-2xl md:text-3xl text-primary-foreground/90 mb-12 font-light">
             Какую поддержку вы ищете?
           </h2>
@@ -63,12 +67,12 @@ const Hero = () => {
           {/* Service Category Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
             {/* Individual Therapy */}
-            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden">
-              <div className="p-8 text-center">
+            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden mobile-card-animation active:scale-95 touch-manipulation">
+              <div className="p-8 text-center flex flex-col items-center">
                 <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <User className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-3">Личная терапия</h3>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-3 min-h-[3.5rem] flex items-center justify-center">Личная терапия</h3>
                 <p className="text-primary-foreground/80 mb-4">Для работы с собой</p>
                 <Badge className="bg-primary text-primary-foreground">
                   <ArrowRight className="w-3 h-3 mr-1" />
@@ -77,14 +81,14 @@ const Hero = () => {
               </div>
             </Card>
 
-            {/* Couples Therapy */}
-            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden">
-              <div className="p-8 text-center">
+            {/* Psychodiagnostic Tests */}
+            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden mobile-card-animation active:scale-95 touch-manipulation">
+              <div className="p-8 text-center flex flex-col items-center">
                 <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-3">Семейная терапия</h3>
-                <p className="text-primary-foreground/80 mb-4">Для пар и семей</p>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-3 leading-tight min-h-[3.5rem] flex items-center justify-center">Диагностические тесты</h3>
+                <p className="text-primary-foreground/80 mb-4">Проверьте свой уровень тревоги, депрессии и т.д.</p>
                 <Badge className="bg-primary text-primary-foreground">
                   <ArrowRight className="w-3 h-3 mr-1" />
                   Начать
@@ -93,12 +97,12 @@ const Hero = () => {
             </Card>
 
             {/* Child/Teen Therapy */}
-            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden">
-              <div className="p-8 text-center">
+            <Card className="group hover:shadow-green transition-all duration-500 hover:-translate-y-2 bg-primary/10 border-primary/30 hover:border-primary/50 cursor-pointer overflow-hidden mobile-card-animation active:scale-95 touch-manipulation">
+              <div className="p-8 text-center flex flex-col items-center">
                 <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Baby className="w-10 h-10 text-primary-foreground" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary-foreground mb-3">Детская терапия</h3>
+                <h3 className="text-2xl font-bold text-primary-foreground mb-3 min-h-[3.5rem] flex items-center justify-center">Детская терапия</h3>
                 <p className="text-primary-foreground/80 mb-4">Для детей и подростков</p>
                 <Badge className="bg-primary text-primary-foreground">
                   <ArrowRight className="w-3 h-3 mr-1" />
@@ -112,11 +116,10 @@ const Hero = () => {
           <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-primary-foreground/20">
             <div className="flex items-center justify-center mb-4">
               <Shield className="w-6 h-6 text-primary mr-2" />
-              <span className="text-lg font-semibold text-primary-foreground">Профессиональные, лицензированные специалисты</span>
+              <span className="text-lg font-semibold text-primary-foreground">Этичные, понимающие специалисты с профильным образованием</span>
             </div>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
-              Получите доступ к крупнейшей сети квалифицированных психологов Казахстана. 
-              Наши специалисты помогут вам с депрессией, тревожностью, отношениями, травмами и многими другими вопросами.
+              Выбирайте психолога для работы с жизненными кризисами, депрессией, тревогой, насилием, отношениями, травмами, нейроотличиями и многими другими запросами
             </p>
           </div>
 
@@ -124,7 +127,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button 
               size="lg" 
-              className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground shadow-green text-lg px-8 py-4 group"
+              className="bg-gradient-primary hover:bg-primary-dark text-primary-foreground shadow-green text-lg px-8 py-4 group mobile-button-animation touch-manipulation"
+              onClick={() => document.getElementById('psychologists')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Найти психолога
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -132,37 +136,37 @@ const Hero = () => {
           </div>
 
           {/* Enhanced Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
                 <UserCheck className="w-8 h-8 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary-foreground mb-2">50+</div>
-              <div className="text-primary-foreground/70">Лицензированных специалистов</div>
+              <div className="text-3xl font-bold text-primary-foreground mb-2">16+</div>
+              <div className="text-primary-foreground/70 text-sm leading-relaxed">Психологов и психотерапевтов - от бакалавров до кандидатов наук</div>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary-foreground mb-2">2,500+</div>
-              <div className="text-primary-foreground/70">Успешных сессий</div>
+              <div className="text-3xl font-bold text-primary-foreground mb-2">1,500+</div>
+              <div className="text-primary-foreground/70 text-sm leading-relaxed">Заявок на терапию</div>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
-                <Star className="w-8 h-8 text-primary" />
+                <Shield className="w-8 h-8 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary-foreground mb-2">4.9</div>
-              <div className="text-primary-foreground/70">Рейтинг клиентов</div>
+              <div className="text-3xl font-bold text-primary-foreground mb-2">100%</div>
+              <div className="text-primary-foreground/70 text-sm leading-relaxed">Этика и конфиденциальность - не выкладываем и не требуем отзывы</div>
             </div>
 
             <div className="text-center group">
               <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors">
-                <Clock className="w-8 h-8 text-primary" />
+                <Award className="w-8 h-8 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary-foreground mb-2">24/7</div>
-              <div className="text-primary-foreground/70">Поддержка</div>
+              <div className="text-2xl font-bold text-primary-foreground mb-2">Научные методы</div>
+              <div className="text-primary-foreground/70 text-sm leading-relaxed">Только научно-доказательные методы, признанные мировым сообществом, никакой эзотерики</div>
             </div>
           </div>
         </div>
