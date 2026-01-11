@@ -181,11 +181,14 @@ const PsychologistDetailModal = ({
         {/* Book Button */}
         <div className="sticky bottom-0 bg-card pt-4 border-t border-border mt-6">
           <Button 
+            asChild
             className="w-full bg-gradient-primary hover:bg-primary-dark transition-all duration-300"
             size="lg"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Записаться на консультацию
+            <a href="https://wa.me/77715738204" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Записаться на консультацию
+            </a>
           </Button>
         </div>
       </DialogContent>

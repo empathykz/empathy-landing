@@ -49,13 +49,13 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <HelpCircle className="w-12 h-12 text-primary mr-4" />
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground animate-fade-in">
+          <div className="flex flex-col items-center justify-center mb-6">
+            <HelpCircle className="w-12 h-12 text-primary mb-4" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
               Часто задаваемые <span className="text-transparent bg-clip-text bg-gradient-primary">вопросы</span>
             </h2>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in">
             Ответы на популярные вопросы о психологических услугах
           </p>
         </div>
@@ -86,13 +86,21 @@ const FAQSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+77777777777"
+              href="https://wa.me/77715738204"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors font-medium"
+            >
+              Написать в WhatsApp
+            </a>
+            <a
+              href="tel:+77715738204"
+              className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
             >
               Позвонить нам
             </a>
             <a
-              href="mailto:info@empathy.kz"
+              href="mailto:Taulanamanzholov@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
             >
               Написать email

@@ -80,11 +80,14 @@ const TeamSection = () => {
             Подробнее
           </Button>
           <Button 
+            asChild
             className="w-full bg-gradient-primary hover:bg-primary-dark group-hover:shadow-green transition-all duration-300 mobile-button-animation touch-manipulation"
             size="sm"
           >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Записаться
+            <a href="https://wa.me/77715738204" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Записаться
+            </a>
           </Button>
         </div>
       </div>

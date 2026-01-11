@@ -139,8 +139,10 @@ const OfferSection = () => {
               <div>
                 <h4 className="font-semibold text-foreground mb-2">7. Контакты</h4>
                 <div className="leading-relaxed">
-                  <p>Email: info@empathy.kz</p>
-                  <p>Телефон: +7 (777) 777-77-77</p>
+                  <p>Email: <a href="mailto:Taulanamanzholov@gmail.com" className="text-primary hover:underline">Taulanamanzholov@gmail.com</a></p>
+                  <p>Телефон: <a href="tel:+77715738204" className="text-primary hover:underline">+7 (771) 573-82-04</a></p>
+                  <p>WhatsApp: <a href="https://wa.me/77715738204" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">+7 (771) 573-82-04</a></p>
+                  <p>Дополнительный: <a href="tel:+77055590147" className="text-primary hover:underline">+7 (705) 559-01-47</a></p>
                   <p>Адрес: г. Астана, ул. Кайрата Рыскулбекова, д. 16</p>
                 </div>
               </div>

@@ -89,7 +89,9 @@ const TestimonialsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#main"
+                href="https://wa.me/77715738204"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-green"
               >
                 Записаться на консультацию
