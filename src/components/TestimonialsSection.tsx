@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Star, Quote } from 'lucide-react';
+import ContactFormModal from './ContactFormModal';
 
 const TestimonialsSection = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   const testimonials = [
     {
       id: 1,
@@ -88,14 +92,12 @@ const TestimonialsSection = () => {
               Начните свой путь к психологическому благополучию уже сегодня
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/77715738204"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setIsContactModalOpen(true)}
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-primary text-primary-foreground rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-green"
               >
                 Записаться на консультацию
-              </a>
+              </button>
               <a
                 href="#faq"
                 className="inline-flex items-center justify-center px-8 py-3 border border-primary-foreground/30 text-primary-foreground rounded-lg hover:bg-primary-foreground/10 transition-colors font-medium"
@@ -106,6 +108,12 @@ const TestimonialsSection = () => {
           </div>
         </div>
       </div>
+
+      <ContactFormModal
+        open={isContactModalOpen}
+        onOpenChange={setIsContactModalOpen}
+        type="booking"
+      />
     </section>
   );
 };

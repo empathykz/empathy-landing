@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, MapPin, Users, ArrowRight } from 'lucide-react';
+import ContactFormModal from './ContactFormModal';
 
 const EventsSection = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<string>('');
+
   const events = [
     {
       id: 1,
@@ -72,6 +77,11 @@ const EventsSection = () => {
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
     }
+  };
+
+  const handleEventRegistration = (eventTitle: string) => {
+    setSelectedEvent(eventTitle);
+    setIsContactModalOpen(true);
   };
 
   return (
@@ -146,6 +156,7 @@ const EventsSection = () => {
                   <Button 
                     className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground group"
                     disabled={event.currentParticipants >= event.maxParticipants}
+                    onClick={() => handleEventRegistration(event.title)}
                   >
                     {event.currentParticipants >= event.maxParticipants ? 'Места закончились' : 'Записаться'}
                     {event.currentParticipants < event.maxParticipants && (
@@ -169,6 +180,13 @@ const EventsSection = () => {
           </Button>
         </div>
       </div>
+
+      <ContactFormModal
+        open={isContactModalOpen}
+        onOpenChange={setIsContactModalOpen}
+        type="event"
+        contextData={{ eventName: selectedEvent }}
+      />
     </section>
   );
 };

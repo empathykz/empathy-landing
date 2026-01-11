@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { UserSearch, HelpCircle, ArrowRight } from 'lucide-react';
+import ContactFormModal from './ContactFormModal';
 
 const PsychologistSelectionSection = () => {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <section id="selection" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -55,6 +59,7 @@ const PsychologistSelectionSection = () => {
               </p>
               <Button 
                 className="w-full bg-gradient-primary hover:bg-primary-dark text-primary-foreground group-hover:shadow-green transition-all duration-300"
+                onClick={() => setIsContactModalOpen(true)}
               >
                 Помочь с выбором
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -72,6 +77,12 @@ const PsychologistSelectionSection = () => {
           </p>
         </div>
       </div>
+
+      <ContactFormModal
+        open={isContactModalOpen}
+        onOpenChange={setIsContactModalOpen}
+        type="selection"
+      />
     </section>
   );
 };

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Menu, X, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ContactFormModal from './ContactFormModal';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const menuItems = [
     { label: 'Главное', href: '#main' },
@@ -46,10 +48,18 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => setIsContactModalOpen(true)}
+            >
               Войти
             </Button>
-            <Button size="sm" className="bg-gradient-primary hover:bg-primary-dark transition-all duration-300 shadow-green">
+            <Button 
+              size="sm" 
+              className="bg-gradient-primary hover:bg-primary-dark transition-all duration-300 shadow-green"
+              onClick={() => setIsContactModalOpen(true)}
+            >
               Заявка
             </Button>
           </div>
@@ -80,10 +90,24 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => {
+                    setIsContactModalOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Войти
                 </Button>
-                <Button size="sm" className="bg-gradient-primary hover:bg-primary-dark">
+                <Button 
+                  size="sm" 
+                  className="bg-gradient-primary hover:bg-primary-dark"
+                  onClick={() => {
+                    setIsContactModalOpen(true);
+                    setIsMenuOpen(false);
+                  }}
+                >
                   Заявка
                 </Button>
               </div>
@@ -91,6 +115,12 @@ const Header = () => {
           </div>
         </div>
       )}
+
+      <ContactFormModal
+        open={isContactModalOpen}
+        onOpenChange={setIsContactModalOpen}
+        type="general"
+      />
     </header>
   );
 };

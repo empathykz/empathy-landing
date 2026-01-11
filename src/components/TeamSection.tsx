@@ -5,16 +5,24 @@ import { Badge } from '@/components/ui/badge';
 import { Award, Calendar, MessageCircle, Info } from 'lucide-react';
 import psychologistsData from '@/data/psychologists.json';
 import PsychologistDetailModal from './PsychologistDetailModal';
+import ContactFormModal from './ContactFormModal';
 
 const TeamSection = () => {
   const [selectedPsychologist, setSelectedPsychologist] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [bookingPsychologist, setBookingPsychologist] = useState<string>('');
 
   const psychologists = psychologistsData.filter(p => p.type === 'therapist');
 
   const handleViewDetails = (person: any) => {
     setSelectedPsychologist(person);
     setIsModalOpen(true);
+  };
+
+  const handleBooking = (psychologistName: string) => {
+    setBookingPsychologist(psychologistName);
+    setIsContactModalOpen(true);
   };
 
   const ProfileCard = ({ person, index }: { person: any; index: number }) => (
@@ -73,14 +81,12 @@ const TeamSection = () => {
             Подробнее
           </Button>
           <Button 
-            asChild
             className="w-full bg-gradient-primary hover:bg-primary-dark group-hover:shadow-green transition-all duration-300 mobile-button-animation touch-manipulation"
             size="sm"
+            onClick={() => handleBooking(person.name)}
           >
-            <a href="https://wa.me/77715738204" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Записаться
-            </a>
+            <MessageCircle className="w-4 h-4 mr-2" />
+            Записаться
           </Button>
         </div>
       </div>
@@ -120,6 +126,13 @@ const TeamSection = () => {
         psychologist={selectedPsychologist}
         open={isModalOpen}
         onOpenChange={setIsModalOpen}
+      />
+
+      <ContactFormModal
+        open={isContactModalOpen}
+        onOpenChange={setIsContactModalOpen}
+        type="booking"
+        contextData={{ psychologist: bookingPsychologist }}
       />
     </section>
   );
