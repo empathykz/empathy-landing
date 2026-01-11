@@ -7,7 +7,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
-  Star, 
   Award, 
   GraduationCap, 
   Languages, 
@@ -22,7 +21,6 @@ interface Psychologist {
   role: string;
   image: string;
   verified: boolean;
-  rating: number;
   sessionPrice: string;
   shortRequests: string;
   fullRequests: string[];
@@ -70,12 +68,6 @@ const PsychologistDetailModal = ({
                 Верифицирован
               </Badge>
             )}
-            <div className="absolute bottom-2 left-2 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1">
-              <div className="flex items-center space-x-1">
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                <span className="text-sm font-medium">{psychologist.rating}</span>
-              </div>
-            </div>
           </div>
 
           <div className="flex-1">

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, Award, Calendar, MessageCircle, Info } from 'lucide-react';
+import { Award, Calendar, MessageCircle, Info } from 'lucide-react';
 import psychologistsData from '@/data/psychologists.json';
 import PsychologistDetailModal from './PsychologistDetailModal';
 
@@ -37,13 +37,6 @@ const TeamSection = () => {
             Верифицирован
           </Badge>
         )}
-        
-        <div className="absolute bottom-3 left-3 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1">
-          <div className="flex items-center space-x-1">
-            <Star className="w-4 h-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{person.rating}</span>
-          </div>
-        </div>
       </div>
 
       <div className="p-6">
