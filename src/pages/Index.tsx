@@ -9,10 +9,12 @@ import OfferSection from '@/components/OfferSection';
 import CodeSection from '@/components/CodeSection';
 import FAQSection from '@/components/FAQSection';
 import SocialSection from '@/components/SocialSection';
+import StructuredData from '@/components/StructuredData';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData />
       <Header />
       <main>
         <Hero />

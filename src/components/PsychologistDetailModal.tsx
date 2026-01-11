@@ -61,7 +61,7 @@ const PsychologistDetailModal = ({
           <div className="relative w-48 h-48 mx-auto md:mx-0 flex-shrink-0">
             <img
               src={psychologist.image}
-              alt={psychologist.name}
+              alt={`${psychologist.name} - ${psychologist.role}, ${psychologist.experience}`}
               className="w-full h-full object-cover rounded-lg"
             />
             {psychologist.verified && (

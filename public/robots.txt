@@ -1,14 +1,34 @@
+# Empathy Psychology Center - Robots.txt
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any in future)
+# Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://www.empathy.kz/sitemap.xml
+
+# Major Search Engines
 User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
-Allow: /
-
+# Social Media Crawlers
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: Instagrambot
 Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Crawl-delay (optional, helps prevent server overload)
+# Crawl-delay: 1
