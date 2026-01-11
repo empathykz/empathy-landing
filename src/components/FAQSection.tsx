@@ -100,7 +100,7 @@ const FAQSection = () => {
               Позвонить нам
             </a>
             <a
-              href="mailto:Taulanamanzholov@gmail.com"
+              href="mailto:empathy.kz@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
             >
               Написать email

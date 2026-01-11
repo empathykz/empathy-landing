@@ -63,7 +63,7 @@ const SocialSection = () => {
               size="lg"
               className="bg-red-600 hover:bg-red-700 text-white shadow-lg group w-full md:w-auto"
             >
-              <a href="mailto:Taulanamanzholov@gmail.com">
+              <a href="mailto:empathy.kz@gmail.com">
                 <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Email
               </a>

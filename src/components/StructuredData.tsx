@@ -8,7 +8,7 @@ const StructuredData = () => {
     "logo": "https://www.empathy.kz/favicon.ico",
     "description": "Квалифицированные психологи и психотерапевты в Казахстане. КПТ-терапия онлайн и оффлайн в Астане и Алматы.",
     "telephone": "+77715738204",
-    "email": "Taulanamanzholov@gmail.com",
+    "email": "empathy.kz@gmail.com",
     "priceRange": "₸₸",
     "areaServed": [
       {
@@ -71,7 +71,7 @@ const StructuredData = () => {
     "name": "Эмпатия - Психологический центр в Астане",
     "image": "https://www.empathy.kz/psyche1.png",
     "telephone": "+77715738204",
-    "email": "Taulanamanzholov@gmail.com",
+    "email": "empathy.kz@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ул. Кайрата Рыскулбекова, д. 16",
@@ -101,7 +101,7 @@ const StructuredData = () => {
     "name": "Эмпатия - Психологический центр в Алматы",
     "image": "https://www.empathy.kz/psyche2.png",
     "telephone": "+77715738204",
-    "email": "Taulanamanzholov@gmail.com",
+    "email": "empathy.kz@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Алматы",
