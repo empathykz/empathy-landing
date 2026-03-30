@@ -79,4 +79,4 @@ This is a professional psychology center website. For modifications or contribut
 
 ## License
 
-Private project for Empathy Psychology Center, Kazakhstan.
+Private project for Empathy Psychology Center, Kazakhstan
