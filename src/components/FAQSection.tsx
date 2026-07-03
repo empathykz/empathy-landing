@@ -94,12 +94,6 @@ const FAQSection = () => {
               Написать в WhatsApp
             </a>
             <a
-              href="tel:+77715738204"
-              className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
-            >
-              Позвонить нам
-            </a>
-            <a
               href="mailto:empathy.kz@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
             >
